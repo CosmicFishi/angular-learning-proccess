@@ -7,3 +7,21 @@
   <p>{{item.name}}</p>
   <p>{{item.price}}</p>
 </div>
+
+<form [formGroup] = "checkOutForm" (ngSubmit)="onSubmit(checkOutForm.value)" >
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="1" type="text" formControlName="name">
+  </div>
+  <div>
+    <label for="address">
+      Address
+    </label>
+    <input id='1' type="text" formControlName="address" >
+  </div>
+
+  <button class="button" type="submit">Purchase</button>
+</form>
+
